@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.algorythm.liferay.eval</groupId>
 	<artifactId>liferay-eval-theme</artifactId>
@@ -18,30 +19,64 @@
 		<liferay.theme.type>vm</liferay.theme.type>
 	</properties>
 	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.liferay.maven.plugins</groupId>
+					<artifactId>liferay-maven-plugin</artifactId>
+					<version>${liferay.maven.plugin.version}</version>
+					<executions>
+						<execution>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>theme-merge</goal>
+								<goal>build-css</goal>
+								<goal>build-thumbnail</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<autoDeployDir>${liferay.deploy.dir}</autoDeployDir>
+						<appServerDeployDir>${liferay.deploy.dir}</appServerDeployDir>
+						<appServerPortalDir>${liferay.server.dir}</appServerPortalDir>
+						<liferayVersion>${liferay.version}</liferayVersion>
+						<pluginType>theme</pluginType>
+						<parentTheme>${liferay.theme.parent}</parentTheme>
+						<themeType>${liferay.theme.type}</themeType>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.liferay.maven.plugins</groupId>
+										<artifactId>liferay-maven-plugin</artifactId>
+										<versionRange> [6.1.30,)</versionRange>
+										<goals>
+											<goal>theme-merge</goal>
+											<goal>build-css</goal>
+											<goal>build-thumbnail</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>com.liferay.maven.plugins</groupId>
 				<artifactId>liferay-maven-plugin</artifactId>
-				<version>${liferay.maven.plugin.version}</version>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>theme-merge</goal>
-							<goal>build-css</goal>
-							<goal>build-thumbnail</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<autoDeployDir>${liferay.deploy.dir}</autoDeployDir>
-					<appServerDeployDir>${liferay.deploy.dir}</appServerDeployDir>
-					<appServerPortalDir>${liferay.server.dir}</appServerPortalDir>
-					<liferayVersion>${liferay.version}</liferayVersion>
-					<pluginType>theme</pluginType>
-					<parentTheme>${liferay.theme.parent}</parentTheme>
-					<themeType>${liferay.theme.type}</themeType>
-				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
