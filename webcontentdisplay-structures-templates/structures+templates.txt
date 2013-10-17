@@ -1,0 +1,23 @@
+=== Article ===
+<?xml version="1.0"?>
+<root>
+	<dynamic-element name="Title" type="text" index-type="text" repeatable="false"/>
+	<dynamic-element name="Content" type="text_area" index-type="text" repeatable="false"/>
+</root>
+
+
+<article>
+    <h3>$Title.getData()</h3>
+    <p>$Content.getData()</p>
+</article>
+
+
+=== Image Gallery ===
+<?xml version="1.0"?>
+<root>
+	<dynamic-element name="Image" type="document_library" index-type="" repeatable="true"/>
+</root>
+
+#foreach ($img in $Image.getSiblings())
+<img src="$img.data" />
+#end

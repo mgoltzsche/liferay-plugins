@@ -1,0 +1,24 @@
+#breadcrumbs ul {
+	line-height: 0;
+}
+
+#breadcrumbs li {
+	margin: 0 5px 0 0;
+	padding: 0 13px 0 0;
+	background: url(@theme_image_path@/common/breadcrumbs-white.png) no-repeat right 50%;
+}
+
+#breadcrumbs li.last {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+#breadcrumbs a:link, #breadcrumbs a:visited, #breadcrumbs a:active, #breadcrumbs a:hover {
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 0.7em;
+	font-weight: bold;
+	line-height: 2em;
+}

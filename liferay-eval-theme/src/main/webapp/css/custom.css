@@ -1,0 +1,96 @@
+/*@import url(http://yui.yahooapis.com/pure/0.3.0/pure-min.css);*/
+@import url(navigation.css);
+@import url(breadcrumbs.css);
+@import url(layout-responsive.css);
+
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size: 13px;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0 0 1em 0;
+}
+
+#skip-to-content, #navigation h1, #breadcrumbs h1 {
+	position: absolute;
+	clip: rect(0 0 0 0);
+}
+
+#banner {
+	background: #000000;
+	color: #ffffff;
+}
+
+#heading, #breadcrumbs, #content, #navigation ul {
+	width: 98%;
+	margin: 0 auto;
+}
+
+#heading .site-title, #heading .page-title {
+	display: inline-block;
+	vertical-align: bottom;
+	margin: 0;
+}
+
+#heading .logo {
+	display: block;
+	padding: 0 70px 0 0;
+	line-height: 0;
+}
+
+#navigation {
+	position: relative;
+	z-index: 2;
+}
+
+#sign-in:link, #sign-in:visited, #sign-in:active, #sign-in:hover {
+	background: url(@theme_image_path@/common/key.png) no-repeat 3px 50%;
+	padding: 3px 0 5px 25px;
+	position: absolute;
+	right: 1%;
+	top: 0;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 0.75em;
+	color: #ffffff;
+}
+
+#content {
+	margin: 15px auto;
+}
+
+.portlet-topper {
+	border-bottom: 2px solid #000000;
+}
+
+.portlet-topper-toolbar {
+	top: 0;
+	right: 1px;
+	padding: 0;
+	background: #ffffff;
+}
+
+.portlet-topper .icon {
+	position: relative;
+	top: -1px;
+}
+
+.portlet-borderless-bar {
+	border-radius: 7px;
+}
+
+.portlet-login form {
+	display: table;
+	margin: 0 auto;
+}
+.portlet-login .aui-field-element {
+	padding-right: 20px;
+}
+
+#footer {
+	margin: 20px 1% 10px 1%;
+	text-align: center;
+}

@@ -1,0 +1,41 @@
+/* fixed webkit column width */
+.aui-w1-3, .aui-w33, .webkit .aui-w1-3, .webkit .aui-w33 {
+	width: 33.3333%;
+}
+
+/* use display:inline-block instead of table-cell for columns to make sure
+   large content doesn't break the layout */ 
+.portlet-layout {
+	display: block;
+	letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+    text-align: center;
+}
+.portlet-column {
+	display: inline-block;
+	letter-spacing: normal;
+	*word-spacing: normal;
+	text-align: left;
+}
+/*.portlet-column-only {
+	width: 100%;
+}*/
+
+/* scale images in containers */
+[class*="aui-w"] img {
+	max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    /* grid units fill whole width (use #wrapper to override browserspecific constraints) */
+    #wrapper [class*="aui-w"] {
+    	display: block;
+    	width: 100%;
+    }
+    /* remove horizontal column padding if small viewport */
+    .portlet-column-content {
+    	padding: 5px 0;
+    }
+}
