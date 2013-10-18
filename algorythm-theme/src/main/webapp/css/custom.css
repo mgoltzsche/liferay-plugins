@@ -17,7 +17,7 @@ h1, h2, h3, h4, p {
 }
 
 a:link, a:visited, a:hover, a:active {
-	color: #67cf42;
+	color: #6de243;
 	text-decoration: underline;
 }
 
@@ -25,8 +25,12 @@ a:link, a:visited, a:hover, a:active {
 	padding: 10px 0 0 0;
 }
 
+@media (max-width: 767px) {
+	padding: 0;
+}
+
 #banner, .portlet-borderless-bar {
-	background: #67cf42;
+	background: #6de243;
 }
 
 #banner, #banner a:link, #banner a:visited, #banner a:hover, #banner a:active {
@@ -63,9 +67,6 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @media (min-width: 768px) {
-	#banner {
-		padding: 0;
-	}
 	#heading .logo {
 		padding: 3px 0 0 0;
 	}
@@ -97,7 +98,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .portlet-topper {
-	border-bottom: 2px solid #67cf42;
+	border-bottom: 2px solid #6de243;
 }
 
 .portlet-topper-toolbar {
