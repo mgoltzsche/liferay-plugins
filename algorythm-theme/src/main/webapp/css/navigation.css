@@ -1,0 +1,37 @@
+#navigation ul {
+	list-style-type: none;
+	line-height: 0;
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#navigation li {
+	display: inline-block;
+	vertical-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation li a:link, #navigation li a:visited, #navigation li a:hover, #navigation li a:active {
+	padding: 10px;
+	display: inline-block;
+	line-height: 1em;
+	font-weight: bold;
+}
+
+#navigation li.selected a:link, #navigation li.selected a:visited, #navigation li.selected a:hover, #navigation li.selected a:active {
+	color: #000000;
+}
+
+#navigation .delete-tab {
+	margin: 0 0 0 -9px;
+	padding: 1px;
+	position: absolute;
+	font-size: 0.7em;
+	font-weight: bold;
+	line-height: 1em;
+	color: #ff0000;
+	cursor: pointer;
+}
