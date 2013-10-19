@@ -23,7 +23,7 @@
 	line-height: 1em;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
 	#breadcrumbs a:link, #breadcrumbs a:visited, #breadcrumbs a:active, #breadcrumbs a:hover {
 		padding: 3px 0;
 	}

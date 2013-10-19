@@ -90,9 +90,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="539.51454"
-     inkscape:cy="401.64875"
+     inkscape:zoom="1.4"
+     inkscape:cx="589.931"
+     inkscape:cy="415.63868"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -142,7 +142,7 @@
      id="layer1"
      transform="translate(0,-287.36218)">
     <rect
-       style="fill:#c7b652;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="fill:#e4993e;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3825"
        width="990"
        height="182.90543"
@@ -231,5 +231,25 @@
            x="158.59395"
            y="110.42115"
            style="font-size:18px;fill:#000000;fill-opacity:1" /></flowRegion><flowPara
-         id="flowPara3805">Projects / ProjectXY /</flowPara></flowRoot>  </g>
+         id="flowPara3805">Projects / ProjectXY /</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3793"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#14467f;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="matrix(0.73161047,0,0,0.73161047,115.22377,375.22483)"><flowRegion
+         id="flowRegion3795"><rect
+           id="rect3797"
+           width="242.85712"
+           height="62.857143"
+           x="427.14285"
+           y="322.14285"
+           style="fill:#14467f;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara3799"
+         style="font-size:22px;fill:#14467f;fill-opacity:1">Projects</flowPara></flowRoot>    <rect
+       style="fill:#003366;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3801"
+       width="320.71429"
+       height="125"
+       x="519.28571"
+       y="713.07648" />
+  </g>
 </svg>

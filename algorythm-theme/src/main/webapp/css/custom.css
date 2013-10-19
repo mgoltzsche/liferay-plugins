@@ -17,12 +17,12 @@ h1, h2, h3, h4, p {
 }
 
 a:link, a:visited, a:hover, a:active {
-	color: #3e8fe4;
-	text-decoration: underline;
+	color: #003366;
+	text-decoration: none;
 }
 
 #banner {
-	padding: 10px 0 0 0;
+	padding: 5px 0 0 0;
 }
 
 @media (max-width: 767px) {
@@ -30,7 +30,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #banner, .portlet-borderless-bar {
-	background: #3e8fe4;
+	background: #e4993e;
 }
 
 #banner, #banner a:link, #banner a:visited, #banner a:hover, #banner a:active {
@@ -38,9 +38,13 @@ a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 }
 
+#banner a:hover {
+	color: #003366;
+}
+
 #heading, #content, #footer {
 	width: 98%;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -51,27 +55,27 @@ a:link, a:visited, a:hover, a:active {
 	line-height: 1em;
 }
 
-#heading .site-title {
-	width: 100%;
-}
-
 #heading .site-title img {
 	max-width: 100%;
     height: auto;
 }
 
+#page-info {
+	padding: 5px 0 0 0;
+}
+
 #heading .logo {
 	display: block;
-	padding: 2px 70px 0 0;
+	padding: 8px 0 0 0;
 	line-height: 0;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 480px) {
 	#heading .logo {
-		padding: 3px 0 0 0;
+		padding: 2px 70px 0 0;
 	}
 	#heading .site-title {
-		width: auto;
+		width: 100%;
 	}
 }
 
@@ -94,18 +98,17 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #main-content {
-	margin: 15px 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 .portlet-topper {
-	border-bottom: 2px solid #3e8fe4;
+	border-bottom: 2px solid #aaaaaa;
 }
 
 .portlet-topper-toolbar {
 	top: 0;
 	right: 1px;
 	padding: 0;
-	background: #ffffff;
 }
 
 .portlet-topper .icon {
