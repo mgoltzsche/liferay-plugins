@@ -3,10 +3,10 @@
 	<portlet>
 		<portlet-name>contact-form</portlet-name>
 		<display-name>Contact Form</display-name>
-		<portlet-class>de.algorythm.liferay.eval.portlet.MyGreetingPortlet</portlet-class>
+		<portlet-class>de.algorythm.liferay.portlet.contactForm.ContactPortlet</portlet-class>
 		<init-param>
 			<name>view-jsp</name>
-			<value>/view.jspx</value>
+			<value>/form.jspx</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>

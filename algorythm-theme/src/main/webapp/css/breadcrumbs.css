@@ -18,7 +18,7 @@
 
 #breadcrumbs a:link, #breadcrumbs a:visited, #breadcrumbs a:active, #breadcrumbs a:hover {
 	display: block;
-	font-size: 0.7em;
+	font-size: 0.85em;
 	font-weight: bold;
 	line-height: 1em;
 }

@@ -10,13 +10,11 @@
 	letter-spacing: -0.31em;
     *letter-spacing: normal;
     *word-spacing: -0.43em;
-    text-align: center;
 }
 .portlet-column {
 	display: inline-block;
 	letter-spacing: normal;
 	*word-spacing: normal;
-	text-align: left;
 }
 .portlet-column-only {
 	width: 100%;

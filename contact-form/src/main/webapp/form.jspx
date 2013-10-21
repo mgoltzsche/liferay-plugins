@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+		xmlns:portlet="http://java.sun.com/portlet_2_0"
+		xmlns:liferay-ui="http://liferay.com/tld/ui"
+		xmlns:aui="http://liferay.com/tld/aui"
+		version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+		pageEncoding="UTF-8" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+	<portlet:actionURL var="formActionURL"/>
+	<portlet:resourceURL var="captchaURL"/>
+	
+	<aui:form cssClass="contact-form" action="${formActionURL}">
+		<liferay-ui:success key="emailSent" message="Email sent successfully!" />
+		<liferay-ui:error key="missingFields" message="Missing required fields"/>
+		<liferay-ui:error key="invalidEmail" message="Invalid email given"/>
+		<liferay-ui:error key="invalidCaptcha" message="Invalid captcha given"/>
+		<div class="form-column">
+			<aui:input type="email" name="from" size="30" value="${from}" required="true"/>
+			<aui:input type="text" name="subject" size="30" value="${subject}"/>
+			<aui:input type="textarea" name="message" cols="33" rows="9" value="${message}" required="true"/>
+		</div>
+		<div class="form-column">
+			<liferay-ui:captcha url="${captchaURL}"/>
+			<aui:button type="submit" label="send"/>
+		</div>
+	</aui:form>
+</jsp:root>

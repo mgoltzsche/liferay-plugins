@@ -1,0 +1,9 @@
+.contact-form {
+	display: table;
+	margin: 0 auto;
+}
+.form-column {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px 0 0;
+}
