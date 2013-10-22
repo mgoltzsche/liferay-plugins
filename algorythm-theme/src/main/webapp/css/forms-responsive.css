@@ -13,7 +13,10 @@ input[type=password],
 input[type=email],
 input[type=number],
 select,
-textarea,
+textarea {
+	display: inline-block;
+	max-width: 100%;
+}
 .aui-field,
 .aui-field-content {
 	display: block;
