@@ -13,16 +13,18 @@
 	<portlet:actionURL var="formActionURL"/>
 	<portlet:resourceURL var="captchaURL"/>
 	
-	<liferay-ui:success key="emailSent" message="Email sent successfully!" />
+	<liferay-ui:success key="emailSent" message="Email sent successfully!"/>
 	<liferay-ui:error key="missingFields" message="Missing required fields"/>
 	<liferay-ui:error key="invalidEmail" message="Invalid email given"/>
 	<liferay-ui:error key="invalidCaptcha" message="Invalid captcha given"/>
 	
 	<aui:form cssClass="contact-form" action="${formActionURL}">
 		<div class="form-column">
-			<aui:input type="email" name="from" size="30" value="${from}" required="true"/>
-			<aui:input type="text" name="subject" size="30" value="${subject}"/>
-			<aui:input type="textarea" name="message" cols="33" rows="9" value="${message}" required="true"/>
+			<div class="horizontal-labeled">
+				<aui:input type="email" name="from" size="30" value="${from}" required="true"/>
+				<aui:input type="text" name="subject" size="30" value="${subject}"/>
+			</div>
+			<aui:input type="textarea" name="message" cols="90" rows="11" value="${message}" required="true"/>
 		</div>
 		<div class="form-column">
 			<liferay-ui:captcha url="${captchaURL}"/>

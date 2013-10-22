@@ -23,6 +23,9 @@
 .portlet-column-only {
 	width: 100%;
 }
+.portlet-column .portlet-boundary {
+	margin: 0 0 1em 0;
+}
 
 /* scale images in containers */
 [class*="aui-w"] img {

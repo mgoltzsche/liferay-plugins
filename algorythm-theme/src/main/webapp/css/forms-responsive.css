@@ -1,0 +1,52 @@
+/**
+ * Avoid layout changes due on field errors
+ */
+#wrapper .aui-field-element {
+	padding-right: 20px;
+}
+
+/**
+ * Let form inputs not overflow layout
+ */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+select,
+textarea,
+.aui-field,
+.aui-field-content {
+	display: block;
+	max-width: 100%;
+}
+.aui-field-content {
+	display: inline-block;
+}
+.aui-field-element {
+	display: block;
+}
+.aui-field-inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+.aui-field-element.aui-field-label-right {
+	display: inline;
+}
+
+/**
+ * Display form fields inside main layout as block elements
+ * if viewport is smaller
+ */
+@media (max-width: 480px) {
+	#wrapper label {
+		display: block;
+		width: auto;
+		text-align: left;
+	}
+	#wrapper .aui-field-element {
+		display: block;
+	}
+	#wrapper .aui-field-element.aui-field-label-right, #wrapper label.aui-choice-label {
+		display: inline;
+	}
+}

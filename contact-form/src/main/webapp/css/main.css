@@ -1,9 +1,21 @@
-.contact-form {
-	display: table;
-	margin: 0 auto;
-}
 .form-column {
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 10px 0 0;
+	max-width: 100%;
+	letter-spacing: normal;
+	margin: 0 1.5em 0 0;
+}
+.horizontal-labeled {
+	padding: 0 0 10px 0;
+}
+.horizontal-labeled .aui-field-label, .horizontal-labeled .aui-field-element {
+	display: inline-block;
+	vertical-align: middle;
+}
+.horizontal-labeled .aui-field-label {
+	width: 10em;
+	padding: 0 10px 0 0;
+}
+.horizontal-labeled .aui-field-element {
+	padding-bottom: 0.3em;
 }
