@@ -13,11 +13,12 @@
 	<portlet:actionURL var="formActionURL"/>
 	<portlet:resourceURL var="captchaURL"/>
 	
+	<liferay-ui:success key="emailSent" message="Email sent successfully!" />
+	<liferay-ui:error key="missingFields" message="Missing required fields"/>
+	<liferay-ui:error key="invalidEmail" message="Invalid email given"/>
+	<liferay-ui:error key="invalidCaptcha" message="Invalid captcha given"/>
+	
 	<aui:form cssClass="contact-form" action="${formActionURL}">
-		<liferay-ui:success key="emailSent" message="Email sent successfully!" />
-		<liferay-ui:error key="missingFields" message="Missing required fields"/>
-		<liferay-ui:error key="invalidEmail" message="Invalid email given"/>
-		<liferay-ui:error key="invalidCaptcha" message="Invalid captcha given"/>
 		<div class="form-column">
 			<aui:input type="email" name="from" size="30" value="${from}" required="true"/>
 			<aui:input type="text" name="subject" size="30" value="${subject}"/>
@@ -25,7 +26,7 @@
 		</div>
 		<div class="form-column">
 			<liferay-ui:captcha url="${captchaURL}"/>
-			<aui:button type="submit" label="send"/>
+			<aui:button type="submit" value="send"/>
 		</div>
 	</aui:form>
 </jsp:root>

@@ -7,14 +7,18 @@
    large content doesn't break the layout */ 
 .portlet-layout {
 	display: block;
-	letter-spacing: -0.31em;
+	letter-spacing: -0.32em;
     *letter-spacing: normal;
     *word-spacing: -0.43em;
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
 .portlet-column {
 	display: inline-block;
+	*display: inline; /* IE < 8: fake inline-block */
+    zoom: 1;
 	letter-spacing: normal;
 	*word-spacing: normal;
+	text-rendering: auto;
 }
 .portlet-column-only {
 	width: 100%;
