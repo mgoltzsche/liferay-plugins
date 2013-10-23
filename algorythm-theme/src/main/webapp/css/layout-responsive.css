@@ -4,7 +4,7 @@
 }
 
 /* use display:inline-block instead of table-cell for columns to make sure
-   large content doesn't break the layout */ 
+   large content doesn't break the layout (see http://purecss.io) */ 
 .portlet-layout {
 	display: block;
 	letter-spacing: -0.32em;
@@ -12,12 +12,17 @@
     *word-spacing: -0.43em;
     text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
+.opera-only :-o-prefocus,
+.portlet-layout {
+    word-spacing: -0.43em;
+}
 .portlet-column {
 	display: inline-block;
 	*display: inline; /* IE < 8: fake inline-block */
     zoom: 1;
 	letter-spacing: normal;
-	*word-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top;
 	text-rendering: auto;
 }
 .portlet-column-only {
