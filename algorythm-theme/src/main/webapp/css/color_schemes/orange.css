@@ -1,0 +1,26 @@
+body.orange #banner,
+body.orange .portlet-borderless-bar {
+	background: #e4993e;
+}
+.orange a:link,
+.orange a:visited,
+.orange a:hover,
+.orange a:active {
+	color: #002255;
+}
+.orange #banner,
+.orange #banner a:link,
+.orange #banner a:visited,
+.orange #banner a:hover,
+.orange #banner a:active {
+	color: #333333;
+}
+.orange #navigation li.selected a:link,
+.orange #navigation li.selected a:visited,
+.orange #navigation li.selected a:hover,
+.orange #navigation li.selected a:active {
+	color: #000000;
+}
+.orange .portlet-topper {
+	border-bottom: 2px solid #aaaaaa;
+}

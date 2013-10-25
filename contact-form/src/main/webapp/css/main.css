@@ -1,21 +1,25 @@
-.form-column {
+.contact-form .form-column {
 	display: inline-block;
 	vertical-align: top;
 	max-width: 100%;
 	letter-spacing: normal;
 	margin: 0 1.5em 0 0;
 }
-.horizontal-labeled {
+.contact-form .aui-field-element {
+	display: block;
+}
+.contact-form .horizontal-labeled {
 	padding: 0 0 10px 0;
 }
-.horizontal-labeled .aui-field-label, .horizontal-labeled .aui-field-element {
+.contact-form .horizontal-labeled .aui-field-label,
+.contact-form .horizontal-labeled .aui-field-element {
 	display: inline-block;
 	vertical-align: middle;
 }
-.horizontal-labeled .aui-field-label {
+.contact-form .horizontal-labeled .aui-field-label {
 	width: 10em;
 	padding: 0 10px 0 0;
 }
-.horizontal-labeled .aui-field-element {
+.contact-form .horizontal-labeled .aui-field-element {
 	padding-bottom: 0.3em;
 }

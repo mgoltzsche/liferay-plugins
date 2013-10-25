@@ -30,7 +30,6 @@ h1, h2, h3, h4, p {
 }
 
 a:link, a:visited, a:hover, a:active {
-	color: #002255;
 	text-decoration: none;
 }
 
@@ -38,17 +37,12 @@ a:hover {
 	text-decoration: underline;
 }
 
+#banner a:hover {
+	text-decoration: none;
+}
+
 #banner {
 	padding: 5px 0 0 0;
-}
-
-#banner, .portlet-borderless-bar {
-	background: #e4993e;
-}
-
-#banner, #banner a:link, #banner a:visited, #banner a:hover, #banner a:active {
-	color: #333333;
-	text-decoration: none;
 }
 
 #heading, #content, #footer {
@@ -123,10 +117,6 @@ a:hover {
 	margin: 1em 0 0 0;
 }
 
-.portlet-topper {
-	border-bottom: 2px solid #aaaaaa;
-}
-
 .portlet-topper-toolbar {
 	top: 0;
 	right: 1px;
@@ -146,3 +136,8 @@ a:hover {
 	margin: 1.5em auto;
 	text-align: center;
 }
+
+@import url(color_schemes/orange.css);
+@import url(color_schemes/blue.css);
+@import url(color_schemes/green.css);
+@import url(color_schemes/dark.css);

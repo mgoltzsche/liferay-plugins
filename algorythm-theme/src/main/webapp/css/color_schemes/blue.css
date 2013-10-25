@@ -1,0 +1,26 @@
+body.blue #banner,
+body.blue .portlet-borderless-bar {
+	background: #5b96df;
+}
+.blue a:link,
+.blue a:visited,
+.blue a:hover,
+.blue a:active {
+	color: #002255;
+}
+.blue #banner,
+.blue #banner a:link,
+.blue #banner a:visited,
+.blue #banner a:hover,
+.blue #banner a:active {
+	color: #333333;
+}
+.blue #navigation li.selected a:link,
+.blue #navigation li.selected a:visited,
+.blue #navigation li.selected a:hover,
+.blue #navigation li.selected a:active {
+	color: #000000;
+}
+.blue .portlet-topper {
+	border-bottom: 2px solid #aaaaaa;
+}

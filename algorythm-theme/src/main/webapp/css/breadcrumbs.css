@@ -7,7 +7,7 @@
 	display: inline-block;
 	margin: 0 5px 0 0;
 	padding: 0 11px 0 0;
-	background: url(@theme_image_path@/common/breadcrumbs.png) no-repeat right 50%;
+	background: url(../images/common/breadcrumb_separator.png) no-repeat right 50%;
 }
 
 #breadcrumbs li.last {

@@ -1,0 +1,26 @@
+body.dark #banner,
+body.dark .portlet-borderless-bar {
+	background: #333333;
+}
+.dark a:link,
+.dark a:visited,
+.dark a:hover,
+.dark a:active {
+	color: #002255;
+}
+.dark #banner,
+.dark #banner a:link,
+.dark #banner a:visited,
+.dark #banner a:hover,
+.dark #banner a:active {
+	color: #eeeeee;
+}
+.dark #navigation li.selected a:link,
+.dark #navigation li.selected a:visited,
+.dark #navigation li.selected a:hover,
+.dark #navigation li.selected a:active {
+	color: #ffffff;
+}
+.dark .portlet-topper {
+	border-bottom: 2px solid #aaaaaa;
+}
