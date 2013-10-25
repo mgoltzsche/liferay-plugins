@@ -38,7 +38,7 @@ $theme.include($body_top_include)
 			<div id="page-info">
 				<nav class="site-breadcrumbs" id="breadcrumbs">
 					<h1>
-						<span>#language ("breadcrumbs")</span>
+						<span>#language("breadcrumbs")</span>
 					</h1>
 		
 					#breadcrumbs()

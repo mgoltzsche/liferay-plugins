@@ -1,8 +1,10 @@
 package de.algorythm.liferay.portlet.contactForm;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Enumeration;
 
+import javax.mail.internet.InternetAddress;
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletException;
@@ -13,9 +15,11 @@ import javax.portlet.RenderResponse;
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
 
+import com.liferay.mail.service.MailServiceUtil;
 import com.liferay.portal.kernel.captcha.CaptchaUtil;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.mail.MailMessage;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.Validator;
@@ -64,7 +68,7 @@ public class ContactPortlet extends MVCPortlet {
 		//redirectURL.setWindowState(WindowState.NORMAL);
 		
 		if (SessionErrors.size(request) == 0) {
-			sendMail(from, subject, message);
+			sendMail(from, "John Doe", subject, message);
 			SessionMessages.add(request, "emailSent");
 		} else {
 			if (from != null)
@@ -106,9 +110,15 @@ public class ContactPortlet extends MVCPortlet {
 		}
 	}
 
-	private void sendMail(final String from, final String subject, final String message) {
-		// TODO: send mail
-		log.info("email sent by " + from);
+	private void sendMail(final String fromEmail, final String fromName,
+			final String subject, final String message)
+			throws UnsupportedEncodingException {
+		final InternetAddress from = new InternetAddress(fromEmail, fromName);
+		final InternetAddress to = new InternetAddress("max.goltzsche@gmail.com", "Max Goltzsche");
+		final MailMessage emailMessage = new MailMessage(from, to, subject, message, false);
+		
+		MailServiceUtil.sendEmail(emailMessage);
+		log.info("email sent by " + fromEmail);
 	}
 	
 	private void checkCaptcha(final PortletRequest request) throws Exception {
