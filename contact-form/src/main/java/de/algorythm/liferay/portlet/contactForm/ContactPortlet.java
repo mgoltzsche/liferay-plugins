@@ -87,8 +87,6 @@ public class ContactPortlet extends MVCPortlet {
 	public void doView(final RenderRequest request,
 			final RenderResponse response) throws IOException,
 			PortletException {
-		System.out.println(request.getParameter(FROM));
-		System.out.println(request.getParameterMap().keySet());
 		request.setAttribute(FROM, request.getParameter(FROM));
 		request.setAttribute(SUBJECT, request.getParameter(SUBJECT));
 		request.setAttribute(MESSAGE, request.getParameter(MESSAGE));
