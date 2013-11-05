@@ -10,10 +10,10 @@
 	<version>1.0-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<liferay.maven.plugin.version>6.1.30</liferay.maven.plugin.version>
-		<liferay.version>6.1.1</liferay.version>
+		<liferay.maven.plugin.version>6.2.0-RC5</liferay.maven.plugin.version>
+		<liferay.version>6.2.0-RC5</liferay.version>
 		<liferay.home>/home/max/opt/liferay-portal</liferay.home>
-		<liferay.server.dir>${liferay.home}/tomcat-7.0.27</liferay.server.dir>
+		<liferay.server.dir>${liferay.home}/tomcat-7.0.42</liferay.server.dir>
 		<liferay.deploy.dir>${liferay.home}/deploy</liferay.deploy.dir>
 		<liferay.theme.parent>_styled</liferay.theme.parent>
 		<liferay.theme.type>vm</liferay.theme.type>
@@ -38,7 +38,7 @@
 					<configuration>
 						<autoDeployDir>${liferay.deploy.dir}</autoDeployDir>
 						<appServerDeployDir>${liferay.deploy.dir}</appServerDeployDir>
-						<appServerPortalDir>${liferay.server.dir}</appServerPortalDir>
+						<!--<appServerPortalDir>${liferay.server.dir}</appServerPortalDir>-->
 						<liferayVersion>${liferay.version}</liferayVersion>
 						<pluginType>theme</pluginType>
 						<parentTheme>${liferay.theme.parent}</parentTheme>
@@ -56,7 +56,7 @@
 									<pluginExecutionFilter>
 										<groupId>com.liferay.maven.plugins</groupId>
 										<artifactId>liferay-maven-plugin</artifactId>
-										<versionRange> [6.1.30,)</versionRange>
+										<versionRange> [${liferay.maven.plugin.version},)</versionRange>
 										<goals>
 											<goal>theme-merge</goal>
 											<goal>build-css</goal>
