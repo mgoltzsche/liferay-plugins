@@ -1,4 +1,4 @@
-/*@import url(portlet-custom.css);*/
+@import url(portlet-custom.css);
 
 #wrapper .portlet-layout .portlet-boundary {
     margin: 0 0 1.5em;

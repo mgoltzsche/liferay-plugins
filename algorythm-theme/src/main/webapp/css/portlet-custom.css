@@ -1,0 +1,13 @@
+h1.portlet-title {
+	font-size: 1.7em;
+	line-height: 1.7em;
+	margin: 0;
+	
+	img {
+		padding: 0 10px 0 0;
+	}
+}
+	
+.portlet-topper-toolbar {
+	top: 0.3em;
+}
