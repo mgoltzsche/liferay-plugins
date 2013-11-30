@@ -1,0 +1,17 @@
+#wrapper .portlet {
+	border: 1px solid #efefef;
+}
+
+#wrapper .portlet-topper {
+	background: #efefef;
+}
+	
+#wrapper h1.portlet-title {
+	font-size: 1.3em;
+	line-height: 1.6em;
+	margin: 0;
+}
+	
+#wrapper .portlet-topper-toolbar {
+	top: 0.3em;
+}
