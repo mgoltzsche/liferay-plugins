@@ -1,32 +1,45 @@
 @import url(portlet-custom.css);
 
+#wrapper {
+	padding-top: 0;
+}
+
 #wrapper .portlet-layout .portlet-boundary {
     margin: 0 0 1.5em;
 }
 
-#skip-to-content, #navigation h1 {
+#heading .site-name, #skip-to-content, #navigation h1 {
 	position: absolute;
 	clip: rect(0 0 0 0);
 }
 
-h1, h2, h3, h4, p {
+.aui h1, .aui h2, .aui h3, .aui h4, .aui p {
 	margin: 0 0 1em 0;
 }
 
-a:link, a:visited, a:hover, a:active {
+#heading h1.site-title {
+	display: inline-block;
+	margin: 0;
+	vertical-align: bottom;
+}
+
+#heading h2.page-title {
+	display: inline-block;
+	margin: 0;
+	vertical-align: bottom;
+	font-size: 2.7em;
+}
+
+/* --- a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 }
 
 a:hover {
 	text-decoration: underline;
-}
+} --- */
 
 /* --- round corners --- */
-.portlet, .portlet-borderless-bar, .nav-account-controls, .nav-add-controls li, .lfr-icon-actions {
+.portlet, .portlet-borderless-bar, .nav-add-controls li, .lfr-icon-actions {
 	border-radius: 7px;
 	overflow: hidden;
-}
-
-.nav-account-controls {
-	border-radius: 0 0 7px 7px
 }
