@@ -21,33 +21,48 @@
 	margin: 0 0 1em 0;
 }
 
+.aui a, .aui a:link, .aui a:visited, .aui a:hover, .aui a:active {
+	color: #408bb6;
+}
+
 #banner {
-	background: #85b82e;
-}
+	background: #408bb6;
+	color: #ffffff;
 
-#heading {
-	padding: 7px 0;
-}
-
-#heading h1.site-title {
-	display: inline-block;
-	margin: 0;
-	vertical-align: bottom;
+	#heading {
+		padding: 7px 0;
+	}
 	
-	.logo {
+	.site-title, .page-title {
+		display: inline-block;
+		margin: 0;
+		vertical-align: bottom;
+	}
+	
+	.site-title .logo {
 		padding: 0 7px 0 0;
+	}
+	
+	.page-title {
+		font-size: 2.7em;
+	}
+	
+	a, a:link, a:visited, a:hover, a:active {
+		color: #ffffff;
 	}
 }
 
-#heading h2.page-title {
-	display: inline-block;
-	margin: 0;
-	vertical-align: bottom;
-	font-size: 2.7em;
+#sign-in {
+	position: absolute;
+	top: 7px;
+	right: 15px;
+	padding: 0 0 0 21px;
+	line-height: 1em;
+	background: url(@theme_image_path@/common/key.png) no-repeat 0 50%;
 }
 
 #main-content {
-	padding: 14px;
+	padding: 2em 15px 15px 15px;
 }
 
 /* --- round corners --- */

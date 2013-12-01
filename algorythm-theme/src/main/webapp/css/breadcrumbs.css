@@ -1,14 +1,16 @@
-#breadcrumbs .breadcrumb {
-	margin: 0;
-	padding: 7px 15px;
-	background: #c5e492;
-}
-
-#breadcrumbs .breadcrumb > li > .divider {
-    color: #85b82e;
-    padding: 0 5px;
-}
-
-#breadcrumbs .breadcrumb .active {
-    font-weight: bold;
+#breadcrumbs {
+	.breadcrumb {
+		margin: 0;
+		padding: 7px 15px;
+		background: #d1e4ef;
+	}
+	
+	.breadcrumb > li > .divider {
+	    color: #408bb6;
+	    padding: 0 5px;
+	}
+	
+	.breadcrumb .active {
+	    font-weight: bold;
+	}	
 }
