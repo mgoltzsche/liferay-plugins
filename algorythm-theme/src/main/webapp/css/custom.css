@@ -1,11 +1,13 @@
 @import "mixins";
 @import url(portlet-custom.css);
 @import url(navigation-custom.css);
+@import url(dockbar-custom.css);
 @import url(breadcrumbs.css);
 @import url(links.css);
 
 .aui body, #wrapper {
 	padding: 0;
+	line-height: 1em;
 }
 
 #wrapper .portlet-layout .portlet-boundary {
@@ -30,7 +32,7 @@
 	color: #ffffff;
 
 	#heading {
-		padding: 7px 0;
+		padding: 7px 0 14px 0;
 	}
 	
 	.site-title, .page-title {
@@ -55,14 +57,14 @@
 #sign-in {
 	position: absolute;
 	top: 7px;
-	right: 15px;
+	right: 3%;
 	padding: 0 0 0 21px;
 	line-height: 1em;
 	background: url(@theme_image_path@/common/key.png) no-repeat 0 50%;
 }
 
 #main-content {
-	padding: 2em 15px 15px 15px;
+	padding: 2em 0;
 }
 
 /* --- round corners --- */
@@ -70,3 +72,24 @@
 	border-radius: 7px;
 	overflow: hidden;
 }
+
+/* --- site padding --- */
+#banner, #breadcrumbs, #main-content {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.dockbar-ready {
+	#banner, #breadcrumbs, #main-content {
+		padding-left: 63px;
+	}
+}
+
+@media (max-width: 979px) {
+	.dockbar-ready {
+		#banner, #breadcrumbs, #main-content {
+			padding-left: 3%;
+		}
+	}
+}
+
