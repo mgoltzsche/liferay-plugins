@@ -1,0 +1,40 @@
+#navigation {
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+	
+	li {
+		display: inline-block;
+		
+		a, a:link, a:visited, a:hover, a:active {
+			display: block;
+			padding: 0 15px;
+			line-height: 2em;
+			font-size: 1.7em;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			background: #f5f5f5;
+		}
+	}
+}
+
+.modify-pages .delete-tab {
+	display: block;
+	margin: 0;
+	padding: 0;
+	top: -3px;
+	right: -3px;
+	width: 14px;
+	height: 14px;
+	overflow: hidden;
+	line-height: 8px;
+	text-align: center;
+	color: #ffffff;
+	border: 1px solid #333333;
+	border-radius: 8px;
+	background: #333333;
+}

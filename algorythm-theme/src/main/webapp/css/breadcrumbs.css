@@ -1,30 +1,14 @@
-/*#breadcrumbs .breadcrumbs {
-	line-height: 0;
+#breadcrumbs .breadcrumb {
 	margin: 0;
+	padding: 7px 15px;
+	background: #c5e492;
 }
 
-#breadcrumbs li {
-	display: inline-block;
-	margin: 0 5px 0 0;
-	padding: 0 11px 0 0;
-	background: url(../images/common/breadcrumb_separator.png) no-repeat right 50%;
+#breadcrumbs .breadcrumb > li > .divider {
+    color: #85b82e;
+    padding: 0 5px;
 }
 
-#breadcrumbs li.last {
-	background: transparent;
-	margin: 0;
-	padding: 0;
+#breadcrumbs .breadcrumb .active {
+    font-weight: bold;
 }
-
-#breadcrumbs a:link, #breadcrumbs a:visited, #breadcrumbs a:active, #breadcrumbs a:hover {
-	display: block;
-	font-size: 0.85em;
-	font-weight: bold;
-	line-height: 1em;
-}
-
-@media (max-width: 480px) {
-	#breadcrumbs a:link, #breadcrumbs a:visited, #breadcrumbs a:active, #breadcrumbs a:hover {
-		padding: 3px 0;
-	}
-}*/

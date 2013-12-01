@@ -1,7 +1,11 @@
+@import "mixins";
 @import url(portlet-custom.css);
+@import url(navigation-custom.css);
+@import url(breadcrumbs.css);
+@import url(links.css);
 
-#wrapper {
-	padding-top: 0;
+.aui body, #wrapper {
+	padding: 0;
 }
 
 #wrapper .portlet-layout .portlet-boundary {
@@ -17,10 +21,22 @@
 	margin: 0 0 1em 0;
 }
 
+#banner {
+	background: #85b82e;
+}
+
+#heading {
+	padding: 7px 0;
+}
+
 #heading h1.site-title {
 	display: inline-block;
 	margin: 0;
 	vertical-align: bottom;
+	
+	.logo {
+		padding: 0 7px 0 0;
+	}
 }
 
 #heading h2.page-title {
@@ -30,13 +46,9 @@
 	font-size: 2.7em;
 }
 
-/* --- a:link, a:visited, a:hover, a:active {
-	text-decoration: none;
+#main-content {
+	padding: 14px;
 }
-
-a:hover {
-	text-decoration: underline;
-} --- */
 
 /* --- round corners --- */
 .portlet, .portlet-borderless-bar, .nav-add-controls li, .lfr-icon-actions {

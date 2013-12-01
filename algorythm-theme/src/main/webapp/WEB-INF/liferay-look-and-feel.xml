@@ -7,10 +7,6 @@
 		<version>6.2.0+</version>
 	</compatibility>
 	<theme id="algorythm-theme" name="algorythm.de Theme">
-		<settings>
-			<setting configurable="true" key="show-site-name-default" type="checkbox" value="true"/>
-			<setting configurable="true" key="show-site-name-supported" type="checkbox" value="true"/>
-		</settings>
 		<color-scheme id="01" name="orange">
 			<css-class>orange</css-class>
 		</color-scheme>
