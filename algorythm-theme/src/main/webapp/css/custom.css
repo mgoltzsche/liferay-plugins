@@ -5,7 +5,9 @@
 @import url(breadcrumbs.css);
 @import url(links.css);
 
-.aui body, #wrapper {
+$maxWidth: 1000px;
+
+.aui body {
 	padding: 0;
 	line-height: 1em;
 }
@@ -27,12 +29,19 @@
 	color: #408bb6;
 }
 
+#wrapper {
+	padding: 0;
+	margin: 0 auto;
+	max-width: $maxWidth;
+}
+
 #banner {
 	background: #408bb6;
 	color: #ffffff;
 
 	#heading {
 		padding: 7px 0 14px 0;
+		margin: 0 15px;
 	}
 	
 	.site-title, .page-title {
@@ -74,7 +83,13 @@
 }
 
 /* --- site padding --- */
-#banner, #breadcrumbs, #main-content {
+@media (max-width: $maxWidth) {
+	#main-content {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+/*#banner, #breadcrumbs, #main-content {
 	padding-left: 3%;
 	padding-right: 3%;
 }
@@ -91,5 +106,5 @@
 			padding-left: 3%;
 		}
 	}
-}
+}*/
 

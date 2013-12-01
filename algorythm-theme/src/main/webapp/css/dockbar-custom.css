@@ -1,3 +1,15 @@
-.dockbar .nav-add-controls {
-	top: 33%;
+.aui .navbar-fixed-top, .aui .navbar-fixed-bottom, .aui .navbar-static-top {
+	margin: 0;
+}
+
+.aui .dockbar {
+	
+	.navbar-inner {
+		position: absolute;
+		right: 0;
+		
+		.user-avatar-image {
+			width: 15px;
+		}
+	}
 }
