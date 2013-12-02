@@ -1,11 +1,11 @@
-#wrapper {	
+#wrapper {
 	.portlet {
-		border: 1px solid #444444;
+		border: 1px solid $lighterColor;
 	}
 	
 	.portlet-topper {
-		background: #444444;
-		color: #ffffff;
+		background: $lighterColor;
+		color: $darkerColor;
 	}
 	
 	.portlet-title {
@@ -18,8 +18,17 @@
 			padding: 0 7px 0 0;
 		}
 	}
+}
+
+.portlet, .portlet-borderless-bar, .portlet-content .lfr-icon-actions, .nav-add-controls > li {
+	border-radius: $borderRadius;
+	overflow: hidden;
+}
 	
-	.portlet-borderless-bar {
-		background: #444444;
-	}
+.portlet-borderless-bar, .portlet-content .lfr-icon-actions {
+	background: $darkerColor;
+}
+
+.signed-out .portlet-borderless-bar {
+	display: none;
 }

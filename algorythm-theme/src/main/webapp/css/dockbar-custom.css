@@ -1,15 +1,22 @@
-.aui .navbar-fixed-top, .aui .navbar-fixed-bottom, .aui .navbar-static-top {
-	margin: 0;
-}
+.aui {
+	.navbar-fixed-top, .aui .navbar-fixed-bottom, .aui .navbar-static-top {
+		margin: 0;
+	}
 
-.aui .dockbar {
-	
-	.navbar-inner {
-		position: absolute;
-		right: 0;
-		
-		.user-avatar-image {
-			width: 15px;
+	.dockbar-split .dockbar {
+		.navbar-inner {
+			position: absolute;
+			right: 0;
+			
+			.user-avatar-image {
+				width: 15px;
+			}
+			
+			.nav-add-controls > li > a {
+				border: 1px solid $darkColor;
+				background: $darkerColor;
+				border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			}
 		}
 	}
 }

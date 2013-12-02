@@ -7,6 +7,11 @@
 		<version>6.2.0+</version>
 	</compatibility>
 	<theme id="algorythm-theme" name="algorythm.de Theme">
+		<settings>
+			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
+			<setting configurable="false" key="show-site-name-default" value="false" />
+			<setting configurable="false" key="show-site-name-supported" value="false" />
+		</settings>
 		<color-scheme id="01" name="orange">
 			<css-class>orange</css-class>
 		</color-scheme>

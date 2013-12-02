@@ -1,3 +1,15 @@
+$maxWidth: 1000px;
+$horizontalPadding: 2%;
+$borderRadius: 5px;
+
+$lightColor: #ffffff;
+$lighterColor: #eeeeee;
+$darkColor: #333333;
+$darkerColor: #667070;
+$darkerColorDarker: #495151;
+$mainColor: #009cd6;
+$mainColorDarker: #00709a;
+
 @import "mixins";
 @import url(portlet-custom.css);
 @import url(navigation-custom.css);
@@ -5,11 +17,11 @@
 @import url(breadcrumbs.css);
 @import url(links.css);
 
-$maxWidth: 1000px;
-
 .aui body {
 	padding: 0;
-	line-height: 1em;
+	line-height: 1.7em;
+	background: $lightColor;
+	color: $darkColor;
 }
 
 #wrapper .portlet-layout .portlet-boundary {
@@ -26,7 +38,7 @@ $maxWidth: 1000px;
 }
 
 .aui a, .aui a:link, .aui a:visited, .aui a:hover, .aui a:active {
-	color: #408bb6;
+	color: $mainColor;
 }
 
 #wrapper {
@@ -35,38 +47,36 @@ $maxWidth: 1000px;
 	max-width: $maxWidth;
 }
 
-#banner {
-	background: #408bb6;
-	color: #ffffff;
-
-	#heading {
-		padding: 7px 0 14px 0;
-		margin: 0 15px;
-	}
+#heading {
+	color: $darkerColor;
+	padding: 15px 0;
 	
 	.site-title, .page-title {
 		display: inline-block;
 		margin: 0;
 		vertical-align: bottom;
 	}
-	
+
+	.site-title {
+		max-width: 100%;
+	}
+
 	.site-title .logo {
-		padding: 0 7px 0 0;
+		display: block;
+		max-width: 100%;
+		padding: 0 15px 0 0;
 	}
 	
 	.page-title {
-		font-size: 2.7em;
-	}
-	
-	a, a:link, a:visited, a:hover, a:active {
-		color: #ffffff;
+		font-size: 2.57em;
 	}
 }
 
 #sign-in {
 	position: absolute;
 	top: 7px;
-	right: 3%;
+	right: 50%;
+	margin: 0 -500px 0 0;
 	padding: 0 0 0 21px;
 	line-height: 1em;
 	background: url(@theme_image_path@/common/key.png) no-repeat 0 50%;
@@ -76,35 +86,23 @@ $maxWidth: 1000px;
 	padding: 2em 0;
 }
 
-/* --- round corners --- */
-.portlet, .portlet-borderless-bar, .nav-add-controls li, .lfr-icon-actions {
-	border-radius: 7px;
-	overflow: hidden;
+#footer {
+	text-align: center;
 }
 
-/* --- site padding --- */
+
 @media (max-width: $maxWidth) {
-	#main-content {
-		padding-left: 15px;
-		padding-right: 15px;
+	#heading, #main-content {
+		padding-left: $horizontalPadding;
+		padding-right: $horizontalPadding;
+	}
+	
+	#navigation, #breadcrumbs {
+		border-radius: 0;
+	}
+	
+	#sign-in {
+		right: $horizontalPadding;
+		margin: 0;
 	}
 }
-/*#banner, #breadcrumbs, #main-content {
-	padding-left: 3%;
-	padding-right: 3%;
-}
-
-.dockbar-ready {
-	#banner, #breadcrumbs, #main-content {
-		padding-left: 63px;
-	}
-}
-
-@media (max-width: 979px) {
-	.dockbar-ready {
-		#banner, #breadcrumbs, #main-content {
-			padding-left: 3%;
-		}
-	}
-}*/
-

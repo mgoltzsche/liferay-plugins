@@ -1,16 +1,17 @@
 #breadcrumbs {
-	background: #444444;
+	background: $lighterColor;
+	border-radius: 0 0 $borderRadius $borderRadius;
 	
 	.breadcrumb {
 		margin: 0;
-		padding: 0.3em 15px;
+		padding: 0.3em $horizontalPadding;
 		background: transparent;
 		
 		li {
 			text-shadow: none;
 			
 			.divider {
-		    	color: #367599;
+		    	color: $darkerColor;
 		    	padding: 0 5px;
 			}
 		}
