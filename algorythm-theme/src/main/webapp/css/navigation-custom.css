@@ -2,10 +2,29 @@
 @import "compass";
 
 #navigation {
-	background-color: $darkerColor;
-	border-radius: $borderRadius $borderRadius 0 0;
+	border-radius: $borderRadius;
 	overflow: hidden;
-	@include background-image(linear-gradient($darkerColor 0%, $darkerColor 47%, $darkerColorDarker 100%));
+	background-color: $darkerColor;
+	@include background-image(linear-gradient($darkerColor 0%, $darkerColorLighter 47%, $darkerColorDarker 100%));
+	
+	&.open {
+		display: block;
+		position: fixed;
+		z-index: 900;
+		top: 70px;
+		right: $horizontalPadding;
+		padding: $borderRadius 0;
+		
+		li {
+			display: block;
+			background: $lighterColor;
+			
+			a, a:link, a:visited, a:hover, a:active {
+				color: $mainColor;
+				text-shadow: none;
+			}
+		}
+	}
 	
 	ul {
 		list-style-type: none;
@@ -24,7 +43,8 @@
 			font-size: 1.5em;
 			font-weight: bold;
 			text-decoration: none;
-			color: $lighterColor;
+			color: $lightColor;
+			text-shadow: -1px -1px $darkerColor;
 		}
 		
 		a:hover {
@@ -33,11 +53,10 @@
 		
 		&.selected {
 			background: $mainColor;
-			@include background-image(linear-gradient($mainColorDarker 0%, $mainColorDarker 47%, $mainColor 100%));
 		
 			a, a:link, a:visited, a:hover, a:active {
 				color: $lightColor;
-				text-shadow: -1px -1px $darkerColorDarker;
+				text-shadow: none;
 			}
 		}
 	}
@@ -66,5 +85,11 @@
 	&:hover {
 		color: #dd0000;
 		border-color: #dd0000;
+	}
+}
+
+@media (max-width: 979px) {
+	#navigation {
+		display: none;
 	}
 }

@@ -1,11 +1,9 @@
-#breadcrumbs {
-	background: $lighterColor;
-	border-radius: 0 0 $borderRadius $borderRadius;
-	
+#breadcrumbs {	
 	.breadcrumb {
 		margin: 0;
-		padding: 0.3em $horizontalPadding;
-		background: transparent;
+		padding: 0.3em 0.9em;
+		background: $lighterColor;
+		border-radius: 0 0 $borderRadius $borderRadius;
 		
 		li {
 			text-shadow: none;

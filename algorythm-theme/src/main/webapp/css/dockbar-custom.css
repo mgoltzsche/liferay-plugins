@@ -1,22 +1,56 @@
 .aui {
-	.navbar-fixed-top, .aui .navbar-fixed-bottom, .aui .navbar-static-top {
+	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
 		margin: 0;
 	}
 
-	.dockbar-split .dockbar {
-		.navbar-inner {
-			position: absolute;
-			right: 0;
+	.dockbar-split .dockbar .navbar-inner {
+		position: fixed;
+		z-index: 999;
+		right: $horizontalPadding;
+		width: auto;
+		min-height: 0;
+		background: $darkerColor;
+		box-shadow: none;
+		border-radius: 0 0 $borderRadius $borderRadius;
+		
+		.btn-navbar {
+			float: none;
+			background: transparent;
+			color: $lightColor;
+			border-radius: $borderRadius;
 			
 			.user-avatar-image {
 				width: 15px;
 			}
+		}
+		
+		.open .nav-navigation {
+			display: none;
+		}
+		
+		.nav-account-controls {
+			right: $horizontalPadding;
+			border-radius: 0 0 $borderRadius $borderRadius;
+			background: $darkerColor;
 			
-			.nav-add-controls > li > a {
-				border: 1px solid $darkColor;
-				background: $darkerColor;
-				border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			& > li {
+				background: transparent;
+				
+				& > a {
+					padding: 0 15px;
+					font-weight: bold;
+				}
 			}
+		}
+
+		.nav-add-controls {
+			top: 13%;
+		}
+		
+		.nav-add-controls > li > a {
+			background: $darkerColor;
+			border: 1px solid $darkColor;
+			border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 		}
 	}
 }
