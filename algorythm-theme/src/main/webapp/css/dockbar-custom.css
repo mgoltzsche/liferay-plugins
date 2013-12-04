@@ -10,7 +10,7 @@
 		width: auto;
 		min-height: 0;
 		background: $darkerColor;
-		box-shadow: none;
+		@include box-shadow(none);
 		@include border-radius(0 0 $borderRadiusLarge $borderRadiusLarge);
 		
 		.btn-navbar {
@@ -30,8 +30,9 @@
 		
 		.nav-account-controls {
 			right: $horizontalPadding;
-			background: $darkerColor;
+			background: $lighterColor;
 			@include border-radius(0 0 $borderRadiusLarge $borderRadiusLarge);
+			@include box-shadow(0 3px 3px -3px #000000);
 			
 			& > li {
 				background: transparent;
