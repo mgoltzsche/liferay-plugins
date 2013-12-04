@@ -1,0 +1,25 @@
+#wrapper {	
+	.portlet {
+		border: 1px solid #444444;
+	}
+	
+	.portlet-topper {
+		background: #444444;
+		color: #ffffff;
+	}
+	
+	.portlet-title {
+		font-size: 1.3em;
+		line-height: 1.3em;
+		margin: 0;
+		padding: 3px;
+		
+		img {
+			padding: 0 7px 0 0;
+		}
+	}
+	
+	.portlet-borderless-bar {
+		background: #444444;
+	}
+}

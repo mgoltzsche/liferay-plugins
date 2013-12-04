@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN"
+"http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.0+</version>
+	</compatibility>
+	<theme id="algorythm-theme" name="algorythm.de Theme">
+		<color-scheme id="01" name="orange">
+			<css-class>orange</css-class>
+		</color-scheme>
+		<color-scheme id="02" name="blue">
+			<css-class>blue</css-class>
+		</color-scheme>
+		<color-scheme id="03" name="green">
+			<css-class>green</css-class>
+		</color-scheme>
+		<color-scheme id="04" name="dark">
+			<css-class>dark</css-class>
+		</color-scheme>
+	</theme>
+</look-and-feel>

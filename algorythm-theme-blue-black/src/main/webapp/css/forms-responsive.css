@@ -1,0 +1,69 @@
+/*
+Avoid layout changes due to field errors
+*/
+#wrapper .aui-field-element {
+	padding-right: 20px;
+}
+
+/*
+Let form elements not overflow layout
+*/
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+select,
+textarea,
+fieldset {
+	display: inline-block;
+	max-width: 100%;
+}
+fieldset {
+	display: table-cell;
+}
+.opera-only :-o-prefocus, /* opera minifies fieldset only if block element */
+fieldset {
+	display: block;
+}
+.aui-field,
+.aui-field-content {
+	display: block;
+	max-width: 100%;
+}
+.aui-field-content {
+	display: inline-block;
+}
+.aui-field-element {
+	display: block;
+}
+.aui-field-inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+.aui-field-element.aui-field-label-right {
+	display: inline;
+}
+[class~="aui-form-validator-message"] {
+	width: auto;
+}
+#wrapper .lfr-discussion-form {
+	display: block;
+}
+
+/*
+Display form fields inside main layout as block elements
+if viewport is smaller
+*/
+@media (max-width: 480px) {
+	#wrapper label {
+		display: block;
+		width: auto;
+		text-align: left;
+	}
+	#wrapper .aui-field-element {
+		display: block;
+	}
+	#wrapper .aui-field-element.aui-field-label-right, #wrapper label.aui-choice-label {
+		display: inline;
+	}
+}

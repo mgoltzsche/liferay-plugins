@@ -1,0 +1,95 @@
+@import "mixins";
+@import url(portlet-custom.css);
+@import url(navigation-custom.css);
+@import url(dockbar-custom.css);
+@import url(breadcrumbs.css);
+@import url(links.css);
+
+.aui body, #wrapper {
+	padding: 0;
+	line-height: 1em;
+}
+
+#wrapper .portlet-layout .portlet-boundary {
+    margin: 0 0 1.5em;
+}
+
+#heading .site-name, #skip-to-content, #navigation h1 {
+	position: absolute;
+	clip: rect(0 0 0 0);
+}
+
+.aui h1, .aui h2, .aui h3, .aui h4, .aui p {
+	margin: 0 0 1em 0;
+}
+
+.aui a, .aui a:link, .aui a:visited, .aui a:hover, .aui a:active {
+	color: #408bb6;
+}
+
+#banner {
+	background: #408bb6;
+	color: #ffffff;
+
+	#heading {
+		padding: 7px 0 14px 0;
+	}
+	
+	.site-title, .page-title {
+		display: inline-block;
+		margin: 0;
+		vertical-align: bottom;
+	}
+	
+	.site-title .logo {
+		padding: 0 7px 0 0;
+	}
+	
+	.page-title {
+		font-size: 2.7em;
+	}
+	
+	a, a:link, a:visited, a:hover, a:active {
+		color: #ffffff;
+	}
+}
+
+#sign-in {
+	position: absolute;
+	top: 7px;
+	right: 3%;
+	padding: 0 0 0 21px;
+	line-height: 1em;
+	background: url(@theme_image_path@/common/key.png) no-repeat 0 50%;
+}
+
+#main-content {
+	padding: 2em 0;
+}
+
+/* --- round corners --- */
+.portlet, .portlet-borderless-bar, .nav-add-controls li, .lfr-icon-actions {
+	border-radius: 7px;
+	overflow: hidden;
+}
+
+/* --- site padding --- */
+#banner, #breadcrumbs, #main-content {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.dockbar-ready {
+	#banner, #breadcrumbs, #main-content {
+		padding-left: 63px;
+	}
+}
+
+@media (max-width: 979px) {
+	.dockbar-ready {
+		#banner, #breadcrumbs, #main-content {
+			padding-left: 3%;
+		}
+	}
+}
+

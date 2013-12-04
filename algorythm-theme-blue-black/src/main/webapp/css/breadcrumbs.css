@@ -1,0 +1,22 @@
+#breadcrumbs {
+	background: #444444;
+	
+	.breadcrumb {
+		margin: 0;
+		padding: 0.3em 0;
+		background: transparent;
+		
+		li {
+			text-shadow: none;
+			
+			.divider {
+		    	color: #367599;
+		    	padding: 0 5px;
+			}
+		}
+		
+		.active {
+		    font-weight: bold;
+		}
+	}
+}
