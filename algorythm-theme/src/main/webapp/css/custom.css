@@ -5,17 +5,16 @@ $lightColor: #ffffff;
 $lighterColor: #f5f5f5;
 $darkColor: #333333;
 $darkerColor: #667070;
-$darkerColorDarker: #495151;
-$darkerColorLighter: #798585;
+$darkerColorDarker: darken($darkerColor, 10%);
+$darkerColorLighter: lighten($darkerColor, 5%);
 $mainColor: #009cd6;
-$mainColorDarker: #00709a;
-$mainColorLighter: #00b9fe;
 
 @import "mixins";
+@import "compass";
+
 @import url(portlet-custom.css);
 @import url(navigation-custom.css);
 @import url(dockbar-custom.css);
-@import url(breadcrumbs.css);
 @import url(links.css);
 
 .aui body {
