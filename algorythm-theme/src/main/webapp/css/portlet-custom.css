@@ -21,8 +21,8 @@
 }
 
 .portlet, .portlet-borderless-bar, .portlet-content .lfr-icon-actions, .nav-add-controls > li {
-	border-radius: $borderRadius;
 	overflow: hidden;
+	@include border-radius($borderRadiusLarge);
 }
 	
 .portlet-borderless-bar, .portlet-content .lfr-icon-actions {

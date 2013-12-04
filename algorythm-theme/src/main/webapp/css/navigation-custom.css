@@ -2,10 +2,10 @@
 @import "compass";
 
 #navigation {
-	border-radius: $borderRadius;
 	overflow: hidden;
 	background-color: $darkerColor;
 	@include background-image(linear-gradient($darkerColor 0%, $darkerColorLighter 47%, $darkerColorDarker 100%));
+	@include border-radius($borderRadiusLarge);
 	
 	&.open {
 		display: block;
@@ -13,14 +13,14 @@
 		z-index: 900;
 		top: 70px;
 		right: $horizontalPadding;
-		padding: $borderRadius 0;
+		padding: $borderRadiusLarge 0;
 		
 		li {
 			display: block;
 			background: $lighterColor;
 			
 			a, a:link, a:visited, a:hover, a:active {
-				color: $mainColor;
+				color: $linkColor;
 				text-shadow: none;
 			}
 		}
@@ -52,7 +52,7 @@
 		}
 		
 		&.selected {
-			background: $mainColor;
+			background: $linkColor;
 		
 			a, a:link, a:visited, a:hover, a:active {
 				color: $lightColor;
@@ -78,8 +78,8 @@
 	text-shadow: none;
 	color: #ffffff;
 	border: 2px solid $lightColor;
-	border-radius: 8px;
 	background: $darkerColor;
+	@include border-radius(8px);
 	@include box-shadow(0 3px 3px -3px #000000);
 	
 	&:hover {

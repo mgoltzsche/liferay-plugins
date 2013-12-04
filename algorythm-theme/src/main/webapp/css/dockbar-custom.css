@@ -11,13 +11,13 @@
 		min-height: 0;
 		background: $darkerColor;
 		box-shadow: none;
-		border-radius: 0 0 $borderRadius $borderRadius;
+		@include border-radius(0 0 $borderRadiusLarge $borderRadiusLarge);
 		
 		.btn-navbar {
 			float: none;
 			background: transparent;
 			color: $lightColor;
-			border-radius: $borderRadius;
+			border-radius: $borderRadiusLarge;
 			
 			.user-avatar-image {
 				width: 15px;
@@ -30,8 +30,8 @@
 		
 		.nav-account-controls {
 			right: $horizontalPadding;
-			border-radius: 0 0 $borderRadius $borderRadius;
 			background: $darkerColor;
+			@include border-radius(0 0 $borderRadiusLarge $borderRadiusLarge);
 			
 			& > li {
 				background: transparent;

@@ -1,5 +1,6 @@
+@import url(_aui_variables.scss);
+
 $horizontalPadding: 3%;
-$borderRadius: 5px;
 
 $lightColor: #ffffff;
 $lighterColor: #f5f5f5;
@@ -7,7 +8,6 @@ $darkColor: #333333;
 $darkerColor: #667070;
 $darkerColorDarker: darken($darkerColor, 10%);
 $darkerColorLighter: lighten($darkerColor, 5%);
-$mainColor: #009cd6;
 
 @import "mixins";
 @import "compass";
@@ -35,10 +35,6 @@ $mainColor: #009cd6;
 
 .aui h1, .aui h2, .aui h3, .aui h4, .aui p {
 	margin: 0 0 1em 0;
-}
-
-.aui a, .aui a:link, .aui a:visited, .aui a:hover, .aui a:active {
-	color: $mainColor;
 }
 
 #wrapper {
