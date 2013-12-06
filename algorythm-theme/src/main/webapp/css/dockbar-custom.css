@@ -1,3 +1,8 @@
+@import "mixins";
+@import "aui/mixins";
+@import "aui_variables";
+@import "algorythm_variables";
+
 .aui {
 	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
 		margin: 0;
@@ -5,17 +10,17 @@
 
 	.dockbar-split .dockbar .navbar-inner {
 		position: fixed;
-		z-index: 999;
+		z-index: 900;
 		right: $horizontalPadding;
 		width: auto;
-		min-height: 0;
-		background: $darkerColor;
+		float: right;
+		background: transparent;
 		@include box-shadow(none);
-		@include border-radius(0 0 $borderRadiusLarge $borderRadiusLarge);
 		
 		.btn-navbar {
+			margin: 5px 0px 5px 10px;
 			float: none;
-			background: transparent;
+			background: $gray;
 			color: $lightColor;
 			border-radius: $borderRadiusLarge;
 			
@@ -30,16 +35,14 @@
 		
 		.nav-account-controls {
 			right: $horizontalPadding;
-			background: $lighterColor;
+			background: $gray;
 			@include border-radius(0 0 $borderRadiusLarge $borderRadiusLarge);
-			@include box-shadow(0 3px 3px -3px #000000);
 			
 			& > li {
 				background: transparent;
 				
 				& > a {
 					padding: 0 15px;
-					font-weight: bold;
 				}
 			}
 		}
@@ -49,9 +52,50 @@
 		}
 		
 		.nav-add-controls > li > a {
-			background: $darkerColor;
-			border: 1px solid $darkColor;
-			border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			background: $gray;
+		}
+		
+		.user-notifications-count {
+			background: $linkColor;
+		}
+	}
+}
+
+@include respond-to(phone, tablet) {
+	.aui .dockbar-split .dockbar .navbar-inner .nav-account-controls {
+		@include speech-bubble(10px);
+		padding: $borderRadiusLarge 0;
+		
+		ul {
+			margin: 0;
+		}
+		
+		li {
+			a {
+				padding: 3px 7px;
+			}
+			
+			li a {
+				padding: 3px 15px;
+			}
+			
+			li li a {
+				padding: 3px 30px;
+			}
+		}
+		
+		li.dropdown {
+			.dropdown-toggle {
+				color: $gray;
+			}
+			
+			&.open > .dropdown-toggle {
+				background: $gray;
+			}
+		}
+		
+		a {
+			@include border-radius(0);
 		}
 	}
 }

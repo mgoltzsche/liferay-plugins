@@ -1,3 +1,7 @@
+@import "aui/mixins";
+@import "algorythm_variables";
+@import "aui_variables";
+
 #wrapper {
 	.portlet {
 		border: 1px solid $lighterColor;
@@ -5,7 +9,7 @@
 	
 	.portlet-topper {
 		background: $lighterColor;
-		color: $darkerColor;
+		color: $gray;
 	}
 	
 	.portlet-title {
@@ -26,7 +30,7 @@
 }
 	
 .portlet-borderless-bar, .portlet-content .lfr-icon-actions {
-	background: $darkerColor;
+	background: $gray;
 }
 
 .signed-out .portlet-borderless-bar {

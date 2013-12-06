@@ -1,0 +1,85 @@
+@import "mixins";
+@import "algorythm_variables";
+@import "aui_variables";
+@import "aui/mixins";
+
+#heading {
+	color: $gray;
+	padding: 30px 0 15px 0;
+	
+	.site-title, .page-title {
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	.site-title {
+		display: inline-block;
+		max-width: 55%;
+	}
+
+	.site-title .logo {
+		display: block;
+		max-width: 100%;
+		padding: 0 15px 0 0;
+	}
+	
+	.page-title {
+		display: inline;
+		font-size: 2.57em;
+	}
+}
+
+@include respond-to(phone, tablet) {
+	#wrapper {
+		padding-top: 4em;
+	}
+	
+	#banner {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 400;
+		@include gradient-horizontal($gray, darken($gray, 10%));
+		@include box-shadow(0 5px 10px rgba(0,0,0,.2));
+	}
+	
+	#heading {
+		padding: 5px $horizontalPadding;
+		color: $white;
+		
+		.site-title {
+			font-size: 27px;
+			line-height: 27px;
+		}
+		
+		.site-title .logo {
+			padding: 0 7px 0 0;
+		}
+		
+		.site-title .logo img {
+			width: auto;
+			height: 27px;
+		}
+		
+		.page-title {
+			font-size: 27px;
+			line-height: 37px;
+			
+			&:before {
+				content: '';
+				display: block;
+				float: right;
+				height: 30px;
+				width: 131px;
+				max-width: 44%;
+			}
+		}
+	}
+}
+
+@include respond-to(phone) {
+	#wrapper {
+		padding-top: 5em;
+	}
+}

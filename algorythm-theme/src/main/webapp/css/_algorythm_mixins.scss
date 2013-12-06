@@ -1,0 +1,30 @@
+@import "aui/mixins";
+
+@mixin speech-bubble($right: 10px, $backgroundColor: $white, $borderColor: rgba(0, 0, 0, 0.2), $borderRadius: $borderRadiusLarge) {
+	background: $backgroundColor;
+	border: 1px solid $borderColor;
+	@include border-radius($borderRadius);
+	@include box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+	&:before {
+		position: absolute;
+		top: -7px;
+		right: $right;
+		display: inline-block;
+		content: '';
+		border-left:   7px solid transparent;
+		border-right:  7px solid transparent;
+		border-bottom: 7px solid #ccc;
+		border-bottom-color: $borderColor;
+	}
+	&:after {
+		position: absolute;
+		top: -6px;
+		right: $right+1;
+		display: inline-block;
+		content: '';
+		border-left:   6px solid transparent;
+		border-right:  6px solid transparent;
+		border-bottom: 6px solid $backgroundColor;
+	}
+}

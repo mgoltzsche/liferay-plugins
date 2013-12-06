@@ -1,29 +1,17 @@
 @import "mixins";
-@import "compass";
+@import "aui/mixins";
+@import "aui_variables";
+@import "algorythm_variables";
+@import "algorythm_mixins";
 
 #navigation {
 	overflow: hidden;
-	background-color: $darkerColor;
-	@include background-image(linear-gradient($darkerColor 0%, $darkerColorLighter 47%, $darkerColorDarker 100%));
+	background-color: $gray;
+	@include background-image(linear-gradient($gray 0%, lighten($gray, 5%) 47%, darken($gray, 10%) 100%));
 	@include border-radius($borderRadiusLarge);
 	
 	&.open {
 		display: block;
-		position: fixed;
-		z-index: 900;
-		top: 70px;
-		right: $horizontalPadding;
-		padding: $borderRadiusLarge 0;
-		
-		li {
-			display: block;
-			background: $lighterColor;
-			
-			a, a:link, a:visited, a:hover, a:active {
-				color: $linkColor;
-				text-shadow: none;
-			}
-		}
 	}
 	
 	ul {
@@ -44,7 +32,7 @@
 			font-weight: bold;
 			text-decoration: none;
 			color: $lightColor;
-			text-shadow: -1px -1px $darkerColor;
+			text-shadow: -1px -1px $gray;
 		}
 		
 		a:hover {
@@ -57,6 +45,28 @@
 			a, a:link, a:visited, a:hover, a:active {
 				color: $lightColor;
 				text-shadow: none;
+			}
+		}
+	}
+}
+
+@include respond-to(phone, tablet) {
+	#navigation {
+		display: none;
+		padding: 7px $horizontalPadding;
+		text-align: center;
+		background: transparent;
+		
+		& > ul {
+			display: inline-block;
+			text-align: left;
+			
+			li {
+				display: block;
+				
+				&.selected {
+					@include border-radius($borderRadiusLarge);
+				}
 			}
 		}
 	}
@@ -78,18 +88,12 @@
 	text-shadow: none;
 	color: #ffffff;
 	border: 2px solid $lightColor;
-	background: $darkerColor;
+	background: $gray;
 	@include border-radius(8px);
 	@include box-shadow(0 3px 3px -3px #000000);
 	
 	&:hover {
 		color: #dd0000;
 		border-color: #dd0000;
-	}
-}
-
-@media (max-width: 979px) {
-	#navigation {
-		display: none;
 	}
 }
