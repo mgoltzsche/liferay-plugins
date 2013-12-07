@@ -19,7 +19,7 @@
 	.site-title {
 		display: inline-block;
 		max-width: 31%;
-		padding: 0 0.5em 0 0;
+		padding: 0 15px 0 0;
 		
 		.logo, .logo img {
 			display: block;
@@ -37,7 +37,7 @@
 
 @include respond-to(phone, tablet) {
 	#wrapper {
-		padding-top: 4em;
+		padding-top: 3em;
 	}
 	
 	#banner {
@@ -56,16 +56,16 @@
 		color: $white;
 		width: 100%;
 		height: 46px;
-		font-size: 23px;
+		font-size: 21px;
 		
 		& > div {
 			display: table-cell;
 			vertical-align: middle;
-			padding: 5px $horizontalPadding;
+			padding: 1px $horizontalPadding;
 		}
 		
 		.site-title {
-			padding: 0 7px 0 0;
+			padding: 0 0.5em 0 0;
 		}
 		
 		.page-title {
@@ -75,10 +75,6 @@
 }
 
 @include respond-to(phone) {
-	#wrapper {
-		padding-top: 5em;
-	}
-	
 	#heading {
 		font-size: 14px;
 	}

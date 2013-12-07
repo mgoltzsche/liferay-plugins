@@ -22,7 +22,7 @@
 			margin: 5px 0px 5px 10px;
 			float: none;
 			background: $gray;
-			color: $lightColor;
+			color: $white;
 			border-radius: $borderRadiusLarge;
 			
 			.user-avatar-image {
@@ -67,7 +67,16 @@
 		@include speech-bubble(10px);
 		padding: $borderRadiusLarge 0;
 		
-		ul {
+		& > li > a, .dropdown-menu a, .site-administration-menu li a {
+			color: #333333;
+			
+			&:hover {
+				color: $white;
+				background: $linkColor;
+			}
+		}
+		
+		&, ul {
 			margin: 0;
 		}
 		
@@ -87,7 +96,7 @@
 		
 		li.dropdown {
 			.dropdown-toggle {
-				color: $gray;
+				color: #333333;
 			}
 			
 			&.open > .dropdown-toggle {

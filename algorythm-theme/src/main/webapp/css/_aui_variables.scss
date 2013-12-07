@@ -1,7 +1,8 @@
 $gray: #667070;
 $white: #FFF;
+$actionColor: #009cd6;
 
-$linkColor: #009cd6;
+$linkColor: $actionColor;
 $linkColorHover: darken($linkColor, 15%);
 
 $baseBorderRadius: 2px;
@@ -15,7 +16,7 @@ $btnDangerBackground: #F53924;
 $btnDangerBackgroundHighlight: #ED2C17;
 $btnInfoBackground: #00CFFF;
 $btnInfoBackgroundHighlight: darken($btnInfoBackground, 4%);
-$btnPrimaryBackground: #667070;
+$btnPrimaryBackground: $actionColor;
 $btnPrimaryBackgroundHighlight: darken($btnPrimaryBackground, 4%);
 $btnSuccessBackground: #0ECD27;
 $btnSuccessBackgroundHighlight: #0ABA1D;
