@@ -1,10 +1,10 @@
+@import "aui_variables";
 @import "algorythm_variables";
 
 .aui body {
 	padding: 0;
-	line-height: 1.7em;
-	background: $lightColor;
-	color: $darkColor;
+	background: $white;
+	color: $gray;
 }
 
 #wrapper .portlet-layout .portlet-boundary {
@@ -18,6 +18,10 @@
 
 .aui h1, .aui h2, .aui h3, .aui h4, .aui p {
 	margin: 0 0 1em 0;
+}
+
+.aui p {
+	line-height: 1.7em;
 }
 
 #wrapper {

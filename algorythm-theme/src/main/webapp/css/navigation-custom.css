@@ -1,18 +1,13 @@
 @import "mixins";
 @import "aui/mixins";
 @import "aui_variables";
-@import "algorythm_variables";
 @import "algorythm_mixins";
+@import "algorythm_variables";
 
 #navigation {
 	overflow: hidden;
-	background-color: $gray;
-	@include background-image(linear-gradient($gray 0%, lighten($gray, 5%) 47%, darken($gray, 10%) 100%));
+	@include gradient-vertical-three-colors($gray, lighten($gray, 5%), 47%, darken($gray, 10%));
 	@include border-radius($borderRadiusLarge);
-	
-	&.open {
-		display: block;
-	}
 	
 	ul {
 		list-style-type: none;
@@ -52,10 +47,19 @@
 
 @include respond-to(phone, tablet) {
 	#navigation {
-		display: none;
-		padding: 7px $horizontalPadding;
+		max-height: 0;
+		padding: 0 $horizontalPadding;
 		text-align: center;
 		background: transparent;
+		@include opacity(0);
+		@include transition(max-height 0.3s ease 0.2s, padding 0.3s ease 0.2s, opacity 0.3s ease);
+		
+		&.open {
+			@include opacity(100);
+			max-height: 270px;
+			padding: 7px $horizontalPadding;
+			@include transition(max-height 0.3s ease, opacity 0.3s ease 0.2s);
+		}
 		
 		& > ul {
 			display: inline-block;

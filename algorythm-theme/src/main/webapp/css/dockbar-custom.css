@@ -1,6 +1,7 @@
 @import "mixins";
 @import "aui/mixins";
 @import "aui_variables";
+@import "algorythm_mixins";
 @import "algorythm_variables";
 
 .aui {
@@ -45,18 +46,18 @@
 					padding: 0 15px;
 				}
 			}
+			
+			.user-notifications-count {
+				background: $linkColor;
+			}
 		}
 
 		.nav-add-controls {
-			top: 13%;
-		}
-		
-		.nav-add-controls > li > a {
-			background: $gray;
-		}
-		
-		.user-notifications-count {
-			background: $linkColor;
+			top: 130px;
+			
+			& > li > a {
+				background: $gray;
+			}
 		}
 	}
 }
