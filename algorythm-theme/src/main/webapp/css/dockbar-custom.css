@@ -4,6 +4,10 @@
 @import "algorythm_mixins";
 @import "algorythm_variables";
 
+.signed-out #_145_navAddControlsNavbarBtn {
+	display: none;
+}
+
 .aui {
 	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
 		margin: 0;
@@ -21,9 +25,10 @@
 		.btn-navbar {
 			margin: 5px 0px 5px 10px;
 			float: none;
-			background: $gray;
+			background: transparent;
 			color: $white;
 			border-radius: $borderRadiusLarge;
+			border: 1px solid darken($gray, 13%);
 			
 			.user-avatar-image {
 				width: 15px;
@@ -55,8 +60,22 @@
 		.nav-add-controls {
 			top: 130px;
 			
-			& > li > a {
-				background: $gray;
+			& > li {
+				background: transparent;
+				@include border-radius($borderRadiusLarge);
+				@include opacity(87);
+				
+				&:hover {
+					@include opacity(100);
+				}
+				
+				&.site-add-controls, &.page-edit-controls {
+					background: $gray;
+					
+					a {
+						background: transparent;
+					}
+				}
 			}
 		}
 	}
@@ -94,14 +113,8 @@
 			}
 		}
 		
-		li.dropdown {
-			.dropdown-toggle {
-				color: #333333;
-			}
-			
-			&.open > .dropdown-toggle {
-				background: $gray;
-			}
+		li.dropdown.open > .dropdown-toggle {
+			background: $gray;
 		}
 		
 		a {

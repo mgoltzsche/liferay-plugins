@@ -26,19 +26,19 @@
 			font-size: 1.5em;
 			font-weight: bold;
 			text-decoration: none;
-			color: $lightColor;
+			color: $white;
 			text-shadow: -1px -1px $gray;
 		}
 		
 		a:hover {
-			color: $lightColor;
+			color: $white;
 		}
 		
 		&.selected {
 			background: $linkColor;
 		
 			a, a:link, a:visited, a:hover, a:active {
-				color: $lightColor;
+				color: $white;
 				text-shadow: none;
 			}
 		}
@@ -57,7 +57,7 @@
 		&.open {
 			@include opacity(100);
 			max-height: 270px;
-			padding: 7px $horizontalPadding;
+			padding: 15px $horizontalPadding;
 			@include transition(max-height 0.3s ease, opacity 0.3s ease 0.2s);
 		}
 		
@@ -91,7 +91,7 @@
 	text-align: center;
 	text-shadow: none;
 	color: #ffffff;
-	border: 2px solid $lightColor;
+	border: 2px solid $white;
 	background: $gray;
 	@include border-radius(8px);
 	@include box-shadow(0 3px 3px -3px #000000);

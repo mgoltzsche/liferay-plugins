@@ -3,8 +3,6 @@
 
 .aui body {
 	padding: 0;
-	background: $white;
-	color: #333333;
 }
 
 #wrapper .portlet-layout .portlet-boundary {

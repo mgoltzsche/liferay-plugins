@@ -1,15 +1,16 @@
 @import "aui/mixins";
-@import "algorythm_variables";
 @import "aui_variables";
+
+$portletBorderColor: lighten($gray, 43%);
 
 #wrapper {
 	.portlet {
-		border: 1px solid $lighterColor;
+		border: 1px solid $portletBorderColor;
 	}
 	
 	.portlet-topper {
-		background: $lighterColor;
-		color: $gray;
+		background: $portletBorderColor;
+		color: $white;
 	}
 	
 	.portlet-title {
@@ -24,11 +25,11 @@
 	}
 }
 
-.portlet, .portlet-borderless-bar, .portlet-content .lfr-icon-actions, .nav-add-controls > li {
+.portlet, .portlet-borderless-bar, .portlet-content .lfr-icon-actions {
 	overflow: hidden;
 	@include border-radius($borderRadiusLarge);
 }
-	
+
 .portlet-borderless-bar, .portlet-content .lfr-icon-actions {
 	background: $gray;
 }
