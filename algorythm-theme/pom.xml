@@ -37,7 +37,6 @@
 					<configuration>
 						<autoDeployDir>${liferay.deploy.dir}</autoDeployDir>
 						<appServerDeployDir>${liferay.deploy.dir}</appServerDeployDir>
-						<!--<appServerPortalDir>${liferay.server.dir}</appServerPortalDir>-->
 						<liferayVersion>${liferay.version}</liferayVersion>
 						<pluginType>theme</pluginType>
 						<parentTheme>${liferay.theme.parent}</parentTheme>

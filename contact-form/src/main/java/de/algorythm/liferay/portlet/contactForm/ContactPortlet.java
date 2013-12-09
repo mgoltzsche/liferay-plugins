@@ -90,6 +90,7 @@ public class ContactPortlet extends MVCPortlet {
 		request.setAttribute(FROM, request.getParameter(FROM));
 		request.setAttribute(SUBJECT, request.getParameter(SUBJECT));
 		request.setAttribute(MESSAGE, request.getParameter(MESSAGE));
+		request.setAttribute("serverName", request.getServerName());
 		
 		super.doView(request, response);
 	}
