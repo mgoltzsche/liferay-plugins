@@ -40,6 +40,7 @@
 			a, a:link, a:visited, a:hover, a:active {
 				color: $white;
 				text-shadow: none;
+				cursor: default;
 			}
 		}
 	}
@@ -94,7 +95,7 @@
 	border: 2px solid $white;
 	background: $gray;
 	@include border-radius(8px);
-	@include box-shadow(0 3px 3px -3px #000000);
+	@include box-shadow(0 5px 10px rgba(0,0,0,.2));
 	
 	&:hover {
 		color: #dd0000;

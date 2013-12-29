@@ -1,5 +1,7 @@
 @import url(static-layout.css);
 @import url(banner.css);
+@import url(banner-custom.css);
 @import url(navigation-custom.css);
+@import url(navigation-custom-custom.css);
 @import url(portlet-custom.css);
 @import url(dockbar-custom.css);

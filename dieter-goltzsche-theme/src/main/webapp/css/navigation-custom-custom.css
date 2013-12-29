@@ -1,0 +1,37 @@
+@import "aui/mixins";
+@import "aui_variables";
+
+#navigation {
+	background: transparent;
+	@include border-radius(0);
+	overflow: visible;
+	
+	li {
+		padding: 0 1.9em 0 0;
+		
+		a, a:link, a:visited, a:hover, a:active {
+			padding: 0;
+			color: $linkColor;
+			text-shadow: none;
+			line-height: 1.5em;
+		}
+		
+		a:hover {
+			color: $linkColorHover;
+		}
+		
+		&.selected {
+			background: transparent;
+			
+			a, a:link, a:visited, a:hover, a:active {
+				color: $linkColorHover;
+				text-shadow: none;
+				border-bottom: 2px solid $linkColorHover;
+			}
+		}
+	}
+}
+
+.modify-pages .delete-tab {
+	right: 0.2em;
+}

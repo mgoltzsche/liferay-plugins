@@ -6,7 +6,7 @@
 	<compatibility>
 		<version>6.2.0+</version>
 	</compatibility>
-	<theme id="algorythm-theme" name="algorythm.de Theme">
+	<theme id="dieter-goltzsche-theme" name="Dieter Goltzsche Theme">
 		<settings>
 			<setting configurable="true" key="display-footer-slogan" type="checkbox" />
 			<setting configurable="true" key="footer-slogan" />
@@ -14,17 +14,5 @@
 			<setting configurable="false" key="show-site-name-default" value="false" />
 			<setting configurable="false" key="show-site-name-supported" value="false" />
 		</settings>
-		<color-scheme id="01" name="orange">
-			<css-class>orange</css-class>
-		</color-scheme>
-		<color-scheme id="02" name="blue">
-			<css-class>blue</css-class>
-		</color-scheme>
-		<color-scheme id="03" name="green">
-			<css-class>green</css-class>
-		</color-scheme>
-		<color-scheme id="04" name="dark">
-			<css-class>dark</css-class>
-		</color-scheme>
 	</theme>
 </look-and-feel>

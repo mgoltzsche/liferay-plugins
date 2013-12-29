@@ -58,12 +58,11 @@ $theme.include($body_top_include)
 			$theme.wrapPortlet("portlet.vm", $content_include)
 		#end
 	</div>
-
+	#if ($theme.getSetting("display-footer-slogan") == true)
 	<footer id="footer" role="contentinfo">
-		<p class="powered-by">
-			#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
-		</p>
+		$theme.getSetting("footer-slogan")
 	</footer>
+	#end
 </div>
 
 $theme.include($body_bottom_include)
